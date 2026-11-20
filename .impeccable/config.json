@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "design/prototype.html"
+        ],
+        "createdAt": "2026-11-19T18:11:15.393Z",
+        "reason": "Codex triage: archived Wearly prototype deliberately retains the original warm catalog palette, verified against the committed preview."
+      }
+    ]
+  }
+}

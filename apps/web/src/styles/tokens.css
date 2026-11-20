@@ -1,0 +1,41 @@
+/* Wearly 的主题变量 */
+:root {
+  /* 颜色 */
+  --bg: #F7F2E9;          /* 页面背景 */
+  --canvas: #DDCFBC;      /* 衣服的底：单品格、搭配卡片 */
+  --card: #F9F4EB;        /* 面板、导航栏、底部 tab */
+  --line: #D9CEBF;        /* 分隔线、描边 */
+  --ink: #30291D;         /* 主文字 */
+  --ink-2: #5C5344;       /* 次要文字 */
+  --ink-3: #62584A;       /* 禁用、占位 */
+  --brand: #454C2C;       /* 主色，只用于控件 */
+  --on-brand: #F7F2E9;    /* 主色上的文字 */
+  --garment-stroke: rgba(0, 0, 0, 0.12); /* 单品描边 */
+
+  --content-width: 660px;
+  --selector-bg: #EDE5D8;
+  --font-display: "Songti SC", "Noto Serif CJK SC", "Noto Serif SC", SimSun, Georgia, serif;
+  --gutter: clamp(12px, 3.6vw, 24px);
+
+  /* 间距 */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+
+  /* 圆角 */
+  --r-card: 8px;
+  --r-sm: 7px;
+
+  /* 品类筛选栏 */
+  --cat-tabs-h: 44px;
+
+  /* 字号 —— 只有五档 */
+  --fs-title: 19px;   /* 导航标题、区块标题 · 600 */
+  --fs-body: 16px;    /* 正文 · 400 */
+  --fs-action: 14px;  /* 按钮、强调 · 500 */
+  --fs-label: 13px;   /* 分组标签、说明 · 400 */
+  --fs-tab: 11px;     /* tab 标签、角标 —— 仅限于此 */
+}

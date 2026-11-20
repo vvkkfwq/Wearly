@@ -1,0 +1,76 @@
+{
+  "easycom": {
+    "custom": {
+      "^uni-(popup|transition)$": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    }
+  },
+  "pages": [
+    {
+      "path": "pages/outfits/index",
+      "style": {
+        "navigationBarTitleText": "搭配",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/wardrobe/index",
+      "style": {
+        "navigationBarTitleText": "衣橱",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/item/detail",
+      "style": {
+        "navigationBarTitleText": "单品",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/capture/index",
+      "style": {
+        "navigationBarTitleText": "录入单品",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/outfits/create",
+      "style": {
+        "navigationBarTitleText": "新建搭配",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/dev/puzzle",
+      "style": {
+        "navigationBarTitleText": "拼图预览"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#62584A",
+    "selectedColor": "#454C2C",
+    "backgroundColor": "#F9F4EB",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/outfits/index",
+        "text": "搭配",
+        "iconPath": "static/tab-outfits.svg",
+        "selectedIconPath": "static/tab-outfits-on.svg"
+      },
+      {
+        "pagePath": "pages/wardrobe/index",
+        "text": "衣橱",
+        "iconPath": "static/tab-wardrobe.svg",
+        "selectedIconPath": "static/tab-wardrobe-on.svg"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Wearly",
+    "navigationBarBackgroundColor": "#F9F4EB",
+    "backgroundColor": "#F7F2E9"
+  }
+}

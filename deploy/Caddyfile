@@ -1,0 +1,27 @@
+{$WEARLY_DOMAIN} {
+	route {
+		@icons path /static/wearly-icon.svg /static/wearly-touch-icon.png
+		handle @icons {
+			root * /srv/wearly/h5
+			file_server
+		}
+
+		basic_auth {
+			import users.caddy
+		}
+
+		@api path /api /api/*
+		handle @api {
+			reverse_proxy api:3000 {
+				header_up -Authorization
+			}
+		}
+
+		handle {
+			encode zstd gzip
+			root * /srv/wearly/h5
+			try_files {path} /index.html
+			file_server
+		}
+	}
+}

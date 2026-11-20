@@ -1,0 +1,41 @@
+{
+  "createdAt": "2026-08-01T00:00:00Z",
+  "items": [
+    ["t1", "top"],
+    ["t2", "top"],
+    ["t4", "top"],
+    ["t6", "top"],
+    ["t7", "top"],
+    ["t8", "top"],
+    ["b1", "bottom"],
+    ["b3", "bottom"],
+    ["b4", "bottom"],
+    ["b5", "bottom"],
+    ["d1", "dress"],
+    ["d2", "dress"],
+    ["o1", "outer"],
+    ["o2", "outer"],
+    ["o4", "outer"],
+    ["s2", "shoes"],
+    ["s3", "shoes"],
+    ["g1", "bag"],
+    ["a1", "accessory"],
+    ["a2", "accessory"],
+    ["a3", "accessory"],
+    ["a4", "accessory"],
+    ["s1", "shoes"],
+    ["g2", "bag"],
+    ["b2", "bottom"],
+    ["o3", "outer"],
+    ["t5", "top"],
+    ["t3", "top"]
+  ],
+  "outfits": [
+    ["f1", ["t2", "b2", "s1", "g2"], true],
+    ["f2", ["o1", "t3", "b4", "s3", "a2"], false],
+    ["f3", ["d1", "s2", "g1"], true],
+    ["f4", ["o2", "t4", "b3", "s1"], false],
+    ["f5", ["t7", "b1", "s3"], false],
+    ["f6", ["o3", "t8", "t3", "b5", "s2", "g1", "a1"], true]
+  ]
+}

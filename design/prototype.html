@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wearly · 界面原型</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #f7f2e9;
+      --text: #30291d;
+      --muted: #5c5344;
+      --line: #d9cebf;
+      --olive: #454c2c;
+      --display: "Songti SC", "Noto Serif SC", SimSun, Georgia, serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font: 16px/1.65 -apple-system, "PingFang SC", system-ui, sans-serif;
+    }
+
+    a { color: var(--olive); text-underline-offset: .22em; }
+    a:focus-visible { outline: 2px solid var(--olive); outline-offset: 4px; }
+
+    .page { max-width: 1140px; margin: auto; padding: clamp(20px, 5vw, 56px); }
+    h1, h2 { margin: 0; font-family: var(--display); line-height: 1.2; }
+    h1 { font-size: clamp(32px, 5vw, 48px); }
+    h2 { font-size: 27px; }
+    .intro, .description, figcaption span { color: var(--muted); }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 22px;
+      margin-top: 24px;
+      border-block: 1px solid var(--line);
+    }
+
+    nav a { display: inline-flex; align-items: center; min-height: 44px; }
+
+    section { margin-top: 44px; }
+    .description { margin: 7px 0 18px; }
+    .screens {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 234px), 1fr));
+      gap: 24px 18px;
+      align-items: start;
+    }
+
+    figure { margin: 0; width: 100%; max-width: 350px; }
+    figure a {
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: var(--background);
+    }
+
+    figure img { display: block; width: 100%; height: auto; }
+    figcaption { padding: 9px 1px 0; font-size: 14px; }
+    figcaption strong { display: block; font: 600 18px/1.5 var(--display); }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>Wearly 界面原型</h1>
+      <p class="intro">这组历史原型截图展示 Wearly 暖调服装目录的主要界面和交互状态。截图使用 390 px 手机视口，点击图片可查看原图。</p>
+    </header>
+    <nav aria-label="原型页面">
+      <a href="#browse">搭配与衣橱</a>
+      <a href="#compose">新建与编辑</a>
+      <a href="#items">录入与单品</a>
+      <a href="#dialogs">菜单与确认</a>
+      <a href="#empty">空状态</a>
+      <a href="#layouts">拼图构图</a>
+    </nav>
+
+    <section id="browse" aria-labelledby="browse-title">
+      <h2 id="browse-title">搭配与衣橱</h2>
+      <p class="description">搭配卡片直接进入编辑。衣橱使用双列大图，品类栏可横向滑动。</p>
+      <div class="screens">
+        <figure>
+          <a href="prototype-screens/outfits.webp"><img src="prototype-screens/outfits.webp" width="780" height="1688" alt="搭配首页，双列平铺卡片和新建搭配按钮"></a>
+          <figcaption><strong>搭配首页</strong><span>进入已有搭配或新建一套。</span></figcaption>
+        </figure>
+        <figure>
+          <a href="prototype-screens/wardrobe.webp"><img src="prototype-screens/wardrobe.webp" width="780" height="1688" alt="衣橱首页，双列实物图、分类和录入入口"></a>
+          <figcaption><strong>衣橱首页</strong><span>按品类筛选，点照片进入单品。</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="compose" aria-labelledby="compose-title">
+      <h2 id="compose-title">新建与编辑搭配</h2>
+      <p class="description">两页共用上方平铺预览、横滑选衣和底部保存栏。保存后回到列表，新建卡片放在第一张。</p>
+      <div class="screens">
+        <figure>
+          <a href="prototype-screens/create.webp"><img src="prototype-screens/create.webp" loading="lazy" width="780" height="1688" alt="新建搭配，上方四件衣物平铺，下方选衣和保存"></a>
+          <figcaption><strong>新建搭配</strong><span>每次选衣即时更新大图。</span></figcaption>
+        </figure>
+        <figure>
+          <a href="prototype-screens/edit.webp"><img src="prototype-screens/edit.webp" loading="lazy" width="780" height="1688" alt="编辑搭配，原单品已勾选，右上角有操作入口"></a>
+          <figcaption><strong>编辑搭配</strong><span>从搭配卡片进入，自动回填原单品。</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="items" aria-labelledby="items-title">
+      <h2 id="items-title">录入与单品</h2>
+      <p class="description">拍照或选图后选择品类。原照片可以完整查看，也可以换图或修改品类。</p>
+      <div class="screens">
+        <figure>
+          <a href="prototype-screens/capture.webp"><img src="prototype-screens/capture.webp" loading="lazy" width="780" height="1688" alt="录入单品，照片、两列品类和两个保存去向"></a>
+          <figcaption><strong>录入单品</strong><span>可连续录入，也可保存后回衣橱。</span></figcaption>
+        </figure>
+        <figure>
+          <a href="prototype-screens/item.webp"><img src="prototype-screens/item.webp" loading="lazy" width="780" height="1688" alt="单品详情，大图、品类、搭配引用数与换照片按钮"></a>
+          <figcaption><strong>单品详情</strong></figcaption>
+        </figure>
+        <figure>
+          <a href="prototype-screens/category.webp"><img src="prototype-screens/category.webp" loading="lazy" width="780" height="1688" alt="从底部展开的品类面板，当前品类以橄榄色标记"></a>
+          <figcaption><strong>修改品类</strong></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="dialogs" aria-labelledby="dialogs-title">
+      <h2 id="dialogs-title">菜单与确认</h2>
+      <p class="description">操作菜单从底部展开，删除和移出用居中确认框说明后果。</p>
+      <div class="screens">
+        <figure>
+          <a href="prototype-screens/outfit-menu.webp"><img src="prototype-screens/outfit-menu.webp" loading="lazy" width="780" height="1688" alt="搭配操作底部面板，包含收藏与删除"></a>
+          <figcaption><strong>搭配操作</strong></figcaption>
+        </figure>
+        <figure>
+          <a href="prototype-screens/delete.webp"><img src="prototype-screens/delete.webp" loading="lazy" width="780" height="1688" alt="删除搭配居中确认框，说明衣服仍留在衣橱"></a>
+          <figcaption><strong>删除搭配</strong></figcaption>
+        </figure>
+        <figure>
+          <a href="prototype-screens/archive.webp"><img src="prototype-screens/archive.webp" loading="lazy" width="780" height="1688" alt="移出衣橱居中确认框，说明原搭配中的衣物仍可显示"></a>
+          <figcaption><strong>移出衣橱</strong></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="empty" aria-labelledby="empty-title">
+      <h2 id="empty-title">空状态</h2>
+      <p class="description">衣橱和搭配都为空时先进入衣橱。有衣服但未保存搭配时，搭配页提供「配一套」入口。</p>
+      <div class="screens">
+        <figure>
+          <a href="prototype-screens/wardrobe-empty.webp"><img src="prototype-screens/wardrobe-empty.webp" loading="lazy" width="780" height="1688" alt="空衣橱，提供拍第一件衣服的入口"></a>
+          <figcaption><strong>空衣橱</strong></figcaption>
+        </figure>
+        <figure>
+          <a href="prototype-screens/outfits-empty.webp"><img src="prototype-screens/outfits-empty.webp" loading="lazy" width="780" height="1688" alt="衣橱已有衣服，搭配页提供配一套的入口"></a>
+          <figcaption><strong>有衣服，暂无搭配</strong></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="layouts" aria-labelledby="layouts-title">
+      <h2 id="layouts-title">拼图构图</h2>
+      <p class="description">下装或连衣裙用右侧长区，上衣与外套放左上，鞋包与配饰放左下。空区释放给现有单品。</p>
+      <div class="screens">
+        <figure>
+          <a href="prototype-screens/puzzle.webp"><img src="prototype-screens/puzzle.webp" loading="lazy" width="780" height="1688" alt="拼图预览，展示少件、标准、叠穿、连衣裙、单件和多配饰情况"></a>
+          <figcaption><strong>拼图预览</strong></figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

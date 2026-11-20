@@ -1,0 +1,28 @@
+{
+  "name": "wearly-api",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env.development --watch src/index.ts",
+    "start": "node --env-file-if-exists=.env.production src/index.ts production",
+    "test": "node --test src/*.test.ts",
+    "type-check": "tsc --noEmit",
+    "seed": "node src/data.ts seed",
+    "backup": "node src/data.ts backup",
+    "restore": "node src/data.ts restore",
+    "migrate": "node --env-file-if-exists=.env.production src/data.ts migrate"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "multer": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^24.19.2",
+    "typescript": "^7.0.2"
+  }
+}
